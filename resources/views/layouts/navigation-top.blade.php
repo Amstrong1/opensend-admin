@@ -78,7 +78,7 @@
                                 </div>
                             </x-dropdown-link>
                         @empty
-                            <p class="text-sm p-4 text-black">
+                            <p class="text-sm p-4 text-black dark:text-white">
                                 Aucune notification
                             </p>
                         @endforelse
