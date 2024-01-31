@@ -18,7 +18,7 @@
 </head>
 
 <body class="font-sans text-gray-900 antialiased">
-    <div class="min-h-screen flex flex-col justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
+    <div class="min-h-screen flex flex-col justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-800">
         <div>
             <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -30,6 +30,29 @@
             {{ $slot }}
         </div>
     </div>
+
+    <script>
+        function showPassword() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                x.type = "text";
+                document.getElementById('view1').classList.add("hidden");
+                document.getElementById('view2').classList.remove("hidden");
+
+                if (document.getElementById('password_confirmation') !== null) {
+                    document.getElementById('password_confirmation').type = "text";
+                }
+            } else {
+                x.type = "password";
+                document.getElementById('view1').classList.remove("hidden");
+                document.getElementById('view2').classList.add("hidden");
+
+                if (document.getElementById('password_confirmation') !== null) {
+                    document.getElementById('password_confirmation').type = "password";
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
