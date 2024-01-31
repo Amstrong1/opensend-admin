@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CashinController;
 use App\Http\Controllers\CashoutController;
@@ -19,13 +20,9 @@ use App\Http\Controllers\TransfertController;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified']);
+Route::get('/', [HomeController::class, 'index'])->middleware(['auth', 'verified']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::resource('/chat', ChatController::class);

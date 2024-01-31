@@ -1,7 +1,7 @@
 <ul class="flex flex-row justify-center" data-te-navbar-nav-ref>
     <li class="mx-1 static" data-te-nav-item-ref>
         <x-nav-link
-            class="text-white flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-white focus:text-white dark:hover:text-white dark:focus:text-white"
+            class="dark:text-white text-black flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white"
             :href="route('dashboard')" :active="request()->routeIs('dashboard')" data-te-ripple-init data-te-ripple-color="light">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -14,7 +14,7 @@
 
     <li class="mx-1 static" data-te-nav-item-ref>
         <x-nav-link
-            class="text-white flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-white focus:text-white dark:hover:text-white dark:focus:text-white"
+            class="dark:text-white text-black flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white"
             :href="route('user.index')" :active="request()->routeIs('user.*')" data-te-ripple-init data-te-ripple-color="light">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -27,7 +27,7 @@
 
     <li class="mx-1 static" data-te-nav-item-ref>
         <x-nav-link
-            class="text-white flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-white focus:text-white dark:hover:text-white dark:focus:text-white"
+            class="dark:text-white text-black flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white"
             :href="route('cashin.index')" :active="request()->routeIs('cashin.*')" data-te-ripple-init data-te-ripple-color="light">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -40,7 +40,7 @@
 
     <li class="mx-1 static" data-te-nav-item-ref>
         <x-nav-link
-            class="text-white flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-white focus:text-white dark:hover:text-white dark:focus:text-white"
+            class="dark:text-white text-black flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white"
             :href="route('transfert.index')" :active="request()->routeIs('transfert.*')" data-te-ripple-init data-te-ripple-color="light">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -54,7 +54,7 @@
 
     <li class="mx-1 static" data-te-nav-item-ref>
         <x-nav-link
-            class="text-white flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-white focus:text-white dark:hover:text-white dark:focus:text-white"
+            class="dark:text-white text-black flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white"
             :href="route('cashout.index')" :active="request()->routeIs('cashout.*')" data-te-ripple-init data-te-ripple-color="light">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -67,7 +67,7 @@
 
     <li class="mx-1 static" data-te-nav-item-ref>
         <x-nav-link
-            class="text-white flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-white focus:text-white dark:hover:text-white dark:focus:text-white"
+            class="dark:text-white text-black flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white"
             :href="route('chat.index')" :active="request()->routeIs('chat.*')" data-te-ripple-init data-te-ripple-color="light">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">

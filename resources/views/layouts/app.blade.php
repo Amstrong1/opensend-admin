@@ -44,8 +44,8 @@
 </head>
 
 <body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-        <header class="fixed z-50 w-full bg-white text-white shadow dark:bg-gray-900">
+    <div class="min-h-screen bg-gray-100 dark:bg-gray-700">
+        <header class="fixed z-50 w-full bg-white text-white shadow dark:bg-gray-700">
             @include('layouts.navigation-top')
             @include('layouts.navigation')
         </header>
