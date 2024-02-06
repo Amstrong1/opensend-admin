@@ -15,3 +15,10 @@ function getFormattedDate($date): String
     $new_date_format = $new_date->day . ' ' . $new_date->monthName . ' ' . $new_date->year . ' à ' . $new_date->hour . 'h' . $prefix . $new_date->minute . 'min';
     return $new_date_format;
 }
+
+function gen_code()
+{
+    return substr(str_shuffle(
+        'abcdefghijklmnopqrstuvwxyzABCEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    ), 1, 6);
+}

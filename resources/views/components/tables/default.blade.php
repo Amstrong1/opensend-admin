@@ -19,7 +19,7 @@
         <table class="w-full whitespace-no-wrap" id="datas-table-buttons" style="width: 100% !important">
             <thead>
                 <tr
-                    class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b bg-gray-50  dark:bg-gray-800 dark:text-gray-400">
+                    class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
                     @foreach ($mattributes as $column => $title)
                         <th class="px-4 py-3 text-center ">{{ $title }}</th>
                     @endforeach

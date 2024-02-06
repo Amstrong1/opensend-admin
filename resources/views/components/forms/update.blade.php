@@ -30,7 +30,7 @@
                     <x-input-label for="{{ $attr }}" value="{!! $value['title'] !!}"></x-input-label>
 
                     <x-dynamic-component :component="$component" id="{{ $attr }}" name="{{ $attr }}"
-                        class="block mt-1 w-full border-2 p-2 rounded outline-0">
+                        class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full p-2">
                         <option value="">Sélectionner</option>
                         @foreach ($value['options'] as $key => $value)
                             <option value="{{ $key }}" @selected(old($attr) ? old($attr) === $key : $fill == $key)> {{ $value }}

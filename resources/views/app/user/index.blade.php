@@ -12,7 +12,7 @@
                         </a> --}}
                     </div>
                     <div class="mt-4">
-                        <x-tables.default :resources="$users" :mattributes="$my_attributes" type="user" />
+                        <x-tables.default :mactions="$my_actions" :resources="$users" :mattributes="$my_attributes" type="user" />
                     </div>
                 </div>
             </div>

@@ -66,7 +66,7 @@
                         @endif
 
                         @forelse (Auth::user()->unreadNotifications as $notification)
-                            <x-dropdown-link href="">
+                            <x-dropdown-link href="{{ route($notification->data['link']) }}">
                                 <div class="flex">
                                     <div>
                                         <p class="text-sm">
