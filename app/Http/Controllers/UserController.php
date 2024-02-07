@@ -12,15 +12,15 @@ class UserController extends Controller
 {
     public function index()
     {
-        $admins = User::where('role', 'admin')->get();
+        // $admins = User::where('role', 'admin')->get();
 
-        foreach ($admins as $admin) {
-            foreach ($admin->unreadNotifications as $notification) {
-                if ($notification->data['link'] == "user.index") {
-                    $notification->markAsRead();
-                }
-            }
-        }
+        // foreach ($admins as $admin) {
+        //     foreach ($admin->unreadNotifications as $notification) {
+        //         if ($notification->data['link'] == "user.index") {
+        //             $notification->markAsRead();
+        //         }
+        //     }
+        // }
 
         return view('app.user.index', [
             'users' => User::where('role', 'user')->get(),
