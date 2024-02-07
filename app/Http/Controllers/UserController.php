@@ -12,10 +12,28 @@ class UserController extends Controller
 {
     public function index()
     {
+        $admins = User::where('role', 'admin')->get();
+
+        foreach ($admins as $admin) {
+            foreach ($admin->unreadNotifications as $notification) {
+                if ($notification->data['link'] == "user.index") {
+                    $notification->markAsRead();
+                }
+            }
+        }
+
         return view('app.user.index', [
             'users' => User::where('role', 'user')->get(),
             'my_actions' => $this->user_actions(),
             'my_attributes' => $this->user_columns(),
+        ]);
+    }
+
+    public function show(User $user)
+    {
+        return view('app.user.show', [
+            'user' => $user,
+            'my_fields' => $this->show_fields(),
         ]);
     }
 
@@ -49,7 +67,6 @@ class UserController extends Controller
             'name' => 'Nom',
             'email' => "Email",
             'tel' => "Contact",
-            'address' => "Adresse",
             'formatted_active' => "Statut",
         );
         return $columns;
@@ -58,9 +75,45 @@ class UserController extends Controller
     private function user_actions()
     {
         $actions = (object) array(
+            'show' => 'Voir',
             'edit' => 'Modifier',
         );
         return $actions;
+    }
+
+    private function show_fields()
+    {
+        $fields = [
+            'name' => [
+                'title' => 'Nom',
+                'field' => 'text',
+            ],
+            'email' => [
+                'title' => 'Email',
+                'field' => 'text',
+            ],
+            'tel' => [
+                'title' => 'Tel',
+                'field' => 'text',
+            ],
+            'country' => [
+                'title' => 'Pays',
+                'field' => 'text',
+            ],
+            'city' => [
+                'title' => 'VIlle',
+                'field' => 'text',
+            ],
+            'address' => [
+                'title' => 'Adresse',
+                'field' => 'text',
+            ],
+            'formatted_active' => [
+                'title' => 'Statut',
+                'field' => 'text',
+            ],
+        ];
+        return $fields;
     }
 
     private function fields()
