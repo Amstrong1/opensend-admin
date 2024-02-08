@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Chat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\UpdateChatRequest;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -32,6 +33,7 @@ class ChatController extends Controller
     public function update(UpdateChatRequest $request, Chat $chat)
     {
         $chat->reply = $request->reply;
+        $chat->admin_id = Auth::id();
 
         if ($chat->save()) {
             Alert::toast('Réponse enregistrée', 'success');
@@ -45,6 +47,7 @@ class ChatController extends Controller
             'user_name' => 'Expediteur',
             'content' => "Message",
             'reply' => "Reponse",
+            'replier' => "Repondant",
             'formatted_date' => "Date",
         );
         return $columns;

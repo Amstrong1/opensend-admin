@@ -11,7 +11,7 @@ class Chat extends Model
 
     protected $table = 'messages';
 
-    protected $append = ['formatted_date', 'user_name'];
+    protected $append = ['formatted_date', 'user_name', 'replier'];
 
     public function getFormattedDateAttribute()
     {
@@ -21,6 +21,11 @@ class Chat extends Model
     public function getUserNameAttribute()
     {        
         return $this->user->name;
+    }
+
+    public function getReplierAttribute()
+    {        
+        return User::where('id', $this->admin_id)->first()->name;
     }
 
     public function user()
