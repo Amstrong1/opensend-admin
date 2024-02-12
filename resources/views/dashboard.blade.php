@@ -57,6 +57,28 @@
                         <!-- Card -->
                         <div class="flex p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
                             <div
+                                class="w-10 h-10 p-2 mr-4 text-white bg-blue-100 rounded-full dark:text-white dark:bg-blue-500" style="background-color: #0c3147">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                                    Dépots Interac : {{ $interacDepot }}
+                                </p>
+                                <p class="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-200">
+                                </p>
+                                <hr>
+                                <p class="mt-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                                    <a href="{{ route('interac.depot') }}">Voir plus</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="flex p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                            <div
                                 class="w-10 h-10 p-2 mr-4 text-white bg-blue-100 rounded-full dark:text-blue-100 dark:bg-white" style="background-color: #0c3147">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -97,6 +119,28 @@
                                 <p
                                     class="inline-block align-baseline mt-2 text-sm font-medium text-gray-600 dark:text-gray-400">
                                     <a href="{{ route('cashout.index') }}">Voir plus</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div class="flex p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800">
+                            <div
+                                class="w-10 h-10 p-2 mr-4 text-white bg-blue-100 rounded-full dark:text-white dark:bg-blue-500" style="background-color: #0c3147">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                                    Retrait Interac : {{ $interacRetrait }}
+                                </p>
+                                <p class="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-200">
+                                </p>
+                                <hr>
+                                <p class="mt-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                                    <a href="{{ route('interac.retrait') }}">Voir plus</a>
                                 </p>
                             </div>
                         </div>

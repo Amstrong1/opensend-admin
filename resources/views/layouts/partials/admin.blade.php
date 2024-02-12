@@ -41,6 +41,19 @@
     <li class="mx-1 static" data-te-nav-item-ref>
         <x-nav-link
             class="dark:text-white text-black flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white"
+            :href="route('interac.depot')" :active="request()->routeIs('cashin.*')" data-te-ripple-init data-te-ripple-color="light">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+            </svg>
+            &nbsp;
+            Dépot Interac
+        </x-nav-link>
+    </li>
+
+    <li class="mx-1 static" data-te-nav-item-ref>
+        <x-nav-link
+            class="dark:text-white text-black flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white"
             :href="route('transfert.index')" :active="request()->routeIs('transfert.*')" data-te-ripple-init data-te-ripple-color="light">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-6 h-6">
@@ -62,6 +75,19 @@
             </svg>
             &nbsp;
             Retrait
+        </x-nav-link>
+    </li>
+
+    <li class="mx-1 static" data-te-nav-item-ref>
+        <x-nav-link
+            class="dark:text-white text-black flex items-center whitespace-nowrap py-1 transition duration-150 ease-in-out hover:text-black focus:text-black dark:hover:text-white dark:focus:text-white"
+            :href="route('interac.retrait')" :active="request()->routeIs('interac.*')" data-te-ripple-init data-te-ripple-color="light">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+            &nbsp;
+            Retrait Interac
         </x-nav-link>
     </li>
 

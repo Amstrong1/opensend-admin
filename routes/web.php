@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CashinController;
 use App\Http\Controllers\CashoutController;
+use App\Http\Controllers\InteracController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransfertController;
 
@@ -31,6 +32,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('/cashout', CashoutController::class);
     Route::resource('/transfert', TransfertController::class);
     
+    Route::get('/interac-depot', [InteracController::class, 'indexDepot'])->name('interac.depot');
+    Route::get('/interac-retrait', [InteracController::class, 'indexRetrait'])->name('interac.retrait');
+    Route::resource('/interac', InteracController::class);
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
