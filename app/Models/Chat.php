@@ -25,7 +25,7 @@ class Chat extends Model
 
     public function getReplierAttribute()
     {        
-        return User::where('id', $this->admin_id)->first()->name;
+        return User::where('id', $this->admin_id)->first()->name ?? "";
     }
 
     public function user()

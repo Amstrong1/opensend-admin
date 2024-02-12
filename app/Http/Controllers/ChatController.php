@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chat;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Notifications\NewMessageNotify;
 use App\Http\Requests\UpdateChatRequest;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -12,6 +14,17 @@ class ChatController extends Controller
 {
     public function index()
     {
+        
+        $admins = User::where('role', 'admin')->get();
+
+        foreach ($admins as $admin) {
+            foreach ($admin->unreadNotifications as $notification) {
+                if ($notification->data['link'] == "chat.index") {
+                    $notification->markAsRead();
+                }
+            }
+        }
+
         return view('app.chat.index', [
             'chats' => Chat::orderBy('id', 'desc')->get(),
             'my_actions' => $this->actions(),
@@ -36,6 +49,7 @@ class ChatController extends Controller
         $chat->admin_id = Auth::id();
 
         if ($chat->save()) {
+            $chat->user->notify(new NewMessageNotify());
             Alert::toast('Réponse enregistrée', 'success');
             return redirect('chat');
         };
