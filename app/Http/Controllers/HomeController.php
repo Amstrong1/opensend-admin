@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Chat;
 use App\Models\Cashin;
 use App\Models\Cashout;
-use App\Models\Chat;
 use App\Models\Interac;
 use App\Models\Transfert;
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $user = User::count();
+        $user = User::where('role', 'user')->count();
+        $partner = User::where('role', 'partner')->count();
         $cashin = Cashin::count();
         $cashout = Cashout::count();
         $interacDepot = Interac::where('type', 'depot')->count();
@@ -22,6 +23,6 @@ class HomeController extends Controller
         $transfert = Transfert::count();
         $chat = Chat::where('reply', null)->count();
 
-        return view('dashboard', compact('user', 'cashin', 'cashout', 'transfert', 'chat', 'interacDepot', 'interacRetrait'));
+        return view('dashboard', compact('user', 'partner', 'cashin', 'cashout', 'transfert', 'chat', 'interacDepot', 'interacRetrait'));
     }
 }

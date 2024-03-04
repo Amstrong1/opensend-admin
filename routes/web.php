@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CashinController;
 use App\Http\Controllers\CashoutController;
 use App\Http\Controllers\InteracController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TransfertController;
 
@@ -29,6 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/chat', ChatController::class);
     Route::resource('/user', UserController::class);
     Route::resource('/cashin', CashinController::class);
+    Route::resource('/partner', PartnerController::class);
     Route::resource('/cashout', CashoutController::class);
     Route::resource('/transfert', TransfertController::class);
     
