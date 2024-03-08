@@ -14,7 +14,7 @@
                 <div class="space-x-8 sm:-my-px sm:ml-10 hidden md:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
                         class="text-black dark:text-white focus:text-black hover:text-black dark:focus:text-white dark:hover:text-white">
-                        {{ 'OpenSend' }}
+                        {{ 'WorldSend' }}
                     </x-nav-link>
                 </div>
             </div>
