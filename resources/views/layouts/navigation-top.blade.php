@@ -25,7 +25,7 @@
                     <x-slot name="trigger">
                         <button class="inline-flex items-center justify-center mx-2 p-2 rounded-md dark:text-white text-black">
                             <div>
-                                <a class="hidden-arrow mr-4 flex items-center dark:text-white text-black transition duration-200 hover:text-white hover:ease-in-out focus:text-white disabled:text-black/30 motion-reduce:transition-none dark:hover:text-white dark:focus:text-white [&.active]:text-black/90 dark:[&.active]:text-white"
+                                <a class="hidden-arrow mr-4 flex items-center dark:text-white text-black transition duration-200 hover:ease-in-out disabled:text-black/30 motion-reduce:transition-none dark:hover:text-white dark:focus:text-white [&.active]:text-black/90 dark:[&.active]:text-white"
                                     href="#" id="dropdownMenuButton1" role="button" data-te-dropdown-toggle-ref
                                     aria-expanded="false">
                                     <!-- Dropdown trigger icon -->
@@ -90,7 +90,7 @@
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             <button
-                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md dark:text-white text-black focus:text-white hover:text-white focus:outline-none transition ease-in-out duration-150">
+                                class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md dark:text-white text-black focus:outline-none transition ease-in-out duration-150">
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
