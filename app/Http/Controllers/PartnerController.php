@@ -109,6 +109,10 @@ class PartnerController extends Controller
                 'title' => 'Statut',
                 'field' => 'text',
             ],
+            'cid' => [
+                'title' => 'CNI',
+                'field' => 'file',
+            ],
         ];
         return $fields;
     }

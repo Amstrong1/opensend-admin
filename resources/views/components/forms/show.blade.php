@@ -16,6 +16,20 @@
             @elseif ($value['field'] === 'model')
                 <x-text-input class="block mt-1 w-full border-2 p-2 rounded outline-0"
                     value="{{ $item->name ?? $item->task }} {{ $item->firstname ?? '' }}" readonly />
+            @elseif ($value['field'] === 'file')
+                <div class="w-1/2 mx-auto p-1 md:p-2">
+                    <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
+                        src="{{ 'https://partenaire.world-send.com/storage/' . $fill ?? 'https://app.world-send.com/storage/' . $fill }})" />
+                </div>
+            @elseif ($value['field'] === 'multiple-file')
+                <div class="flex">
+                    @foreach ($images as $item)
+                        <div class="w-1/2 mx-auto p-1 md:p-2">
+                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
+                            src="{{ 'https://partenaire.world-send.com/storage/' . $fill ?? 'https://app.world-send.com/storage/' . $fill }})" />
+                        </div>
+                    @endforeach
+                </div>
             @else
                 <x-text-input class="block mt-1 w-full border-2 p-2 rounded outline-0" value="{{ old($attr) ?? $fill }}"
                     readonly />
