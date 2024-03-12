@@ -20,10 +20,10 @@
                 <div class="w-1/2 mx-auto p-1 md:p-2">
                     @if (request()->routeIs('partner.show'))
                         <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                            src="{{ 'https://partenaire.world-send.com/storage/' . $fill }}" />
+                            src="{{ 'https://partenaire.world-send.com/public/storage/' . $fill }}" />
                     @elseif (request()->routeIs('user.show'))
                         <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                            src="{{ 'https://app.world-send.com/storage/' . $fill }}" />
+                            src="{{ 'https://app.world-send.com/public/storage/' . $fill }}" />
                     @else
                         <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
                             src="{{ asset('storage/' . $fill) }}" />
@@ -35,10 +35,10 @@
                         <div class="w-1/2 mx-auto p-1 md:p-2">
                             @if (request()->routeIs('partner.show'))
                                 <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                                    src="{{ 'https://partenaire.world-send.com/storage/' . $fill }}" />
+                                    src="{{ 'https://partenaire.world-send.com/public/storage/' . $fill }}" />
                             @elseif (request()->routeIs('user.show'))
                                 <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                                    src="{{ 'https://app.world-send.com/storage/' . $fill }}" />
+                                    src="{{ 'https://app.world-send.com/public/storage/' . $fill }}" />
                             @else
                                 <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
                                     src="{{ asset('storage/' . $fill) }}" />
