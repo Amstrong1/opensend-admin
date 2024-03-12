@@ -18,10 +18,10 @@
                     value="{{ $item->name ?? $item->task }} {{ $item->firstname ?? '' }}" readonly />
             @elseif ($value['field'] === 'file')
                 <div class="w-1/2 mx-auto p-1 md:p-2">
-                    @if (routeIs('partner.show'))
+                    @if (request()->routeIs('partner.show'))
                         <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
                             src="{{ 'https://partenaire.world-send.com/storage/' . $fill }})" />
-                    @elseif (routeIs('user.show'))
+                    @elseif (request()->routeIs('user.show'))
                         <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
                             src="{{ 'https://app.world-send.com/storage/' . $fill }})" />
                     @else
@@ -33,8 +33,16 @@
                 <div class="flex">
                     @foreach ($images as $item)
                         <div class="w-1/2 mx-auto p-1 md:p-2">
-                            <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
-                                src={{ 'https://partenaire.world-send.com/storage/' . $fill ?? 'https://app.world-send.com/storage/' . $fill }} />
+                            @if (request()->routeIs('partner.show'))
+                                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
+                                    src="{{ 'https://partenaire.world-send.com/storage/' . $fill }})" />
+                            @elseif (request()->routeIs('user.show'))
+                                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
+                                    src="{{ 'https://app.world-send.com/storage/' . $fill }})" />
+                            @else
+                                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center"
+                                    src="{{ asset('storage/' . $fill) }}" />
+                            @endif
                         </div>
                     @endforeach
                 </div>
